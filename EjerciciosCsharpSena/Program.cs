@@ -340,12 +340,11 @@ namespace EjerciciosCsharpSena
             //Console.WriteLine($"\nTotal de créditos inscritos: {creditosTotales}");
             //Console.WriteLine($"Valor total sin descuentos: ${totalSinDescuento:N0}");
             //Console.WriteLine($"Total de descuentos aplicados: ${totalDescuento:N0}");
-
+            //Console.WriteLine($"Valor neto pagado por los estudiantes: ${totalConDescuento:N0}");
 
 
 
             //Ejercicio 6
-            //Console.WriteLine($"Valor neto pagado por los estudiantes: ${totalConDescuento:N0}");
             //La empresa de tecnología “COMPUTRONIC”, es una empresa líder en venta y
             //distribución de equipos tecnológicos en la ciudad de Bogotá y cuenta en su única sede
             //con un N cantidad de empleados quienes realizanN ventas durante el día. La empresa
