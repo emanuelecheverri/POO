@@ -239,16 +239,16 @@ namespace EjerciciosCsharpSena
             estudiantes.
             e. Valor neto de las inscripciones del primer semestre del 2020
              */
-            //            int ingenieriaSistemas = 0, psicologia = 0, economia = 0, comunicacionSocial = 0, administracionEmpresas = 0;
-            //            int creditosTotales = 0;
-            //            decimal totalSinDescuento = 0, totalDescuento = 0, totalConDescuento = 0;
-            //            int ProgramaAcademico, MetodoPago;
+            //int ingenieriaSistemas = 0, psicologia = 0, economia = 0, comunicacionSocial = 0, administracionEmpresas = 0;
+            //int creditosTotales = 0;
+            //decimal totalSinDescuento = 0, totalDescuento = 0, totalConDescuento = 0;
+            //int ProgramaAcademico, MetodoPago;
 
-            //            const decimal valorCredito = 200000m;
+            //const decimal valorCredito = 200000m;
 
-            //            while (true)
-            //            {
-            //                Console.WriteLine(@"
+            //while (true)
+            //{
+            //    Console.WriteLine(@"
             //Ingrese su programa académico:
             //1) Ingeniería de Sistemas
             //2) Psicología
@@ -257,115 +257,360 @@ namespace EjerciciosCsharpSena
             //5) Administración de Empresas
             //6) Salir
             //");
-            //                ProgramaAcademico = int.Parse(Console.ReadLine());
+            //    ProgramaAcademico = int.Parse(Console.ReadLine());
 
-            //                if (ProgramaAcademico == 6)
-            //                {
-            //                    Console.WriteLine("Has salido del programa...");
-            //                    break;
-            //                }
+            //    if (ProgramaAcademico == 6)
+            //    {
+            //        Console.WriteLine("Has salido del programa...");
+            //        break;
+            //    }
 
-            //                int creditos = 0;
-            //                decimal descuento = 0;
+            //    int creditos = 0;
+            //    decimal descuento = 0;
 
-            //                switch (ProgramaAcademico)
-            //                {
-            //                    case 1:
-            //                        creditos = 20;
-            //                        descuento = 0.18m;
-            //                        ingenieriaSistemas++;
-            //                        break;
+            //    switch (ProgramaAcademico)
+            //    {
+            //        case 1:
+            //            creditos = 20;
+            //            descuento = 0.18m;
+            //            ingenieriaSistemas++;
+            //            break;
 
-            //                    case 2:
-            //                        creditos = 16;
-            //                        descuento = 0.12m;
-            //                        psicologia++;
-            //                        break;
+            //        case 2:
+            //            creditos = 16;
+            //            descuento = 0.12m;
+            //            psicologia++;
+            //            break;
 
-            //                    case 3:
-            //                        creditos = 18;
-            //                        descuento = 0.10m;
-            //                        economia++;
-            //                        break;
+            //        case 3:
+            //            creditos = 18;
+            //            descuento = 0.10m;
+            //            economia++;
+            //            break;
 
-            //                    case 4:
-            //                        creditos = 18;
-            //                        descuento = 0.05m;
-            //                        comunicacionSocial++;
-            //                        break;
+            //        case 4:
+            //            creditos = 18;
+            //            descuento = 0.05m;
+            //            comunicacionSocial++;
+            //            break;
 
-            //                    case 5:
-            //                        creditos = 20;
-            //                        descuento = 0.15m;
-            //                        administracionEmpresas++;
-            //                        break;
+            //        case 5:
+            //            creditos = 20;
+            //            descuento = 0.15m;
+            //            administracionEmpresas++;
+            //            break;
 
-            //                    default:
-            //                        Console.WriteLine("Opción no válida, intenta nuevamente.");
-            //                        continue;
-            //                }
+            //        default:
+            //            Console.WriteLine("Opción no válida, intenta nuevamente.");
+            //            continue;
+            //    }
 
-            //                decimal precio = creditos * valorCredito;
-            //                totalSinDescuento += precio;
+            //    decimal precio = creditos * valorCredito;
+            //    totalSinDescuento += precio;
 
-            //                Console.WriteLine(@"
+            //    Console.WriteLine(@"
             //Seleccione su método de pago: 
             //1) Efectivo 
             //2) En línea
             //");
-            //                MetodoPago = int.Parse(Console.ReadLine());
+            //    MetodoPago = int.Parse(Console.ReadLine());
 
-            //                if (MetodoPago == 1)
-            //                {
-            //                    decimal descuentoAplicado = precio * descuento;
-            //                    precio -= descuentoAplicado;
-            //                    totalDescuento += descuentoAplicado;
-            //                }
+            //    if (MetodoPago == 1)
+            //    {
+            //        decimal descuentoAplicado = precio * descuento;
+            //        precio -= descuentoAplicado;
+            //        totalDescuento += descuentoAplicado;
+            //    }
 
-            //                Console.WriteLine($"El valor a pagar es de: ${precio:N0}");
-            //                totalConDescuento += precio;
-            //                creditosTotales += creditos;
+            //    Console.WriteLine($"El valor a pagar es de: ${precio:N0}");
+            //    totalConDescuento += precio;
+            //    creditosTotales += creditos;
 
-            //                Console.WriteLine("Estudiante matriculado correctamente.\n");
-            //            }
-
-            //            // Mostrar resumen
-            //            Console.WriteLine("\n=== Resumen de inscripciones ===");
-            //            Console.WriteLine($"Ingeniería de Sistemas: {ingenieriaSistemas}");
-            //            Console.WriteLine($"Psicología: {psicologia}");
-            //            Console.WriteLine($"Economía: {economia}");
-            //            Console.WriteLine($"Comunicación Social: {comunicacionSocial}");
-            //            Console.WriteLine($"Administración de Empresas: {administracionEmpresas}");
-
-            //            Console.WriteLine($"\nTotal de créditos inscritos: {creditosTotales}");
-            //            Console.WriteLine($"Valor total sin descuentos: ${totalSinDescuento:N0}");
-            //            Console.WriteLine($"Total de descuentos aplicados: ${totalDescuento:N0}");
+            //    Console.WriteLine("Estudiante matriculado correctamente.\n");
+            //}
 
 
-            //
-            //            Console.WriteLine($"Valor neto pagado por los estudiantes: ${totalConDescuento:N0}");
-            //            La empresa de tecnología “COMPUTRONIC”, es una empresa líder en venta y
-                        //distribución de equipos tecnológicos en la ciudad de Bogotá y cuenta en su única sede
-                        //con un N cantidad de empleados quienes realizanN ventas durante el día. La empresa
-                        //requiere identificar cuántas de las ventas fueron menores o iguales a $300.000,
-                        //cuántas ventas fueron mayores a $
-                        //300.000 y menores a $800.000 y cuántas fueron mayores o iguales a
-                        //$800.000 por cada empleado.
-                        //También se necesita conocer monto total por la venta realizada por empleado y las
-                        //bonificaciones a pagar según la venta realizada.Para el pago de la bonificación es
-                        //necesario tener en cuenta la siguiente tabla:
-                        //Venta Realizada
-                        //% Pago
-                        //Bonificación
-                        //Ventas superiores o iguales a $400.000 3 %
-                        //Ventas entre $400.001 a $800.000 5 %
-                        //Ventas superiores a $800.000 10 %
-                        //Al finalizar el día, se debe calcular el valor a pagar por empleado, especificando: pago
-                        //básico y el valor de la bonificación recibida.Tenga en cuenta que el pago básico para
-                        //todos los empleados es de $500.000
-                        //Desarrolle una solución básica de programación que le permita a la empresa
-                        //COMPUTRONIC conocer toda la información que es de su interés. Los valores para
-                        //ingresar deben ser números positivos.
+            //Console.WriteLine("\n=== Resumen de inscripciones ===");
+            //Console.WriteLine($"Ingeniería de Sistemas: {ingenieriaSistemas}");
+            //Console.WriteLine($"Psicología: {psicologia}");
+            //Console.WriteLine($"Economía: {economia}");
+            //Console.WriteLine($"Comunicación Social: {comunicacionSocial}");
+            //Console.WriteLine($"Administración de Empresas: {administracionEmpresas}");
+
+            //Console.WriteLine($"\nTotal de créditos inscritos: {creditosTotales}");
+            //Console.WriteLine($"Valor total sin descuentos: ${totalSinDescuento:N0}");
+            //Console.WriteLine($"Total de descuentos aplicados: ${totalDescuento:N0}");
+
+
+
+
+            //Ejercicio 6
+            //Console.WriteLine($"Valor neto pagado por los estudiantes: ${totalConDescuento:N0}");
+            //La empresa de tecnología “COMPUTRONIC”, es una empresa líder en venta y
+            //distribución de equipos tecnológicos en la ciudad de Bogotá y cuenta en su única sede
+            //con un N cantidad de empleados quienes realizanN ventas durante el día. La empresa
+            //requiere identificar cuántas de las ventas fueron menores o iguales a $300.000,
+            //cuántas ventas fueron mayores a $
+            //300.000 y menores a $800.000 y cuántas fueron mayores o iguales a
+            //$800.000 por cada empleado.
+            //También se necesita conocer monto total por la venta realizada por empleado y las
+            //bonificaciones a pagar según la venta realizada.Para el pago de la bonificación es
+            //necesario tener en cuenta la siguiente tabla:
+            //Venta Realizada
+            //% Pago
+            //Bonificación
+            //Ventas superiores o iguales a $400.000 3 %
+            //Ventas entre $400.001 a $800.000 5 %
+            //Ventas superiores a $800.000 10 %
+            //Al finalizar el día, se debe calcular el valor a pagar por empleado, especificando: pago
+            //básico y el valor de la bonificación recibida.Tenga en cuenta que el pago básico para
+            //todos los empleados es de $500.000
+            //Desarrolle una solución básica de programación que le permita a la empresa
+            //COMPUTRONIC conocer toda la información que es de su interés. Los valores para
+            //ingresar deben ser números positivos.
+
+            //const decimal PAGO_BASICO = 500000m;
+
+            //Console.Write("Ingrese la cantidad de empleados: ");
+            //int empleados = int.Parse(Console.ReadLine());
+
+            //for (int i = 1; i <= empleados; i++)
+            //{
+            //    Console.WriteLine($"\n=== Empleado #{i} ===");
+            //    Console.Write("Ingrese la cantidad de ventas realizadas: ");
+            //    int ventas = int.Parse(Console.ReadLine());
+
+            //    int menoresIgual300 = 0;
+            //    int entre300y800 = 0;
+            //    int mayoresIgual800 = 0;
+            //    decimal totalVentas = 0;
+
+            //    for (int j = 1; j <= ventas; j++)
+            //    {
+            //        decimal valorVenta;
+
+            //        do
+            //        {
+            //            Console.Write($"Ingrese el valor de la venta #{j}: ");
+            //            valorVenta = decimal.Parse(Console.ReadLine());
+            //            if (valorVenta <= 0)
+            //                Console.WriteLine(" El valor debe ser positivo. Intente de nuevo.");
+            //        } while (valorVenta <= 0);
+
+            //        totalVentas += valorVenta;
+
+            //        if (valorVenta <= 300000)
+            //            menoresIgual300++;
+            //        else if (valorVenta < 800000)
+            //            entre300y800++;
+            //        else
+            //            mayoresIgual800++;
+            //    }
+
+            //    decimal porcentajeBono = 0;
+
+            //    if (totalVentas >= 400000 && totalVentas <= 800000)
+            //        porcentajeBono = 0.05m;
+            //    else if (totalVentas > 800000)
+            //        porcentajeBono = 0.10m;
+            //    else if (totalVentas >= 400000)
+            //        porcentajeBono = 0.03m;
+
+            //    decimal bonificacion = totalVentas * porcentajeBono;
+            //    decimal totalPagar = PAGO_BASICO + bonificacion;
+
+            //    Console.WriteLine("\n--- Resultados del empleado ---");
+            //    Console.WriteLine($"Ventas ≤ $300.000: {menoresIgual300}");
+            //    Console.WriteLine($"Ventas entre $300.001 y $799.999: {entre300y800}");
+            //    Console.WriteLine($"Ventas ≥ $800.000: {mayoresIgual800}");
+            //    Console.WriteLine($"Monto total vendido: ${totalVentas:N0}");
+            //    Console.WriteLine($"Bonificación: ${bonificacion:N0} ({porcentajeBono * 100}%)");
+            //    Console.WriteLine($"Pago total (básico + bonificación): ${totalPagar:N0}");
+            //    Console.WriteLine("------------------------------------");
+            //}
+
+            //Console.WriteLine("\n Proceso finalizado. Fin del día.");
+
+
+            /*
+             Ejercicio 7
+             Una oficina de seguros ha reunido datos concernientes a todos los accidentes de
+            tránsito ocurridos en el área metropolitana de Bogotá en el último año. Por cada
+            conductor involucrado en un accidente se toman los siguientes datos: año de
+            nacimiento, sexo (1: Femenino, 2: Masculino) y registro del carro (1: Bogotá, 2: Otras
+            4
+            ciudades). Desarrollar una solución básica de programación que calcule:
+            • El porcentaje de conductores menores de 30 años.
+            • Porcentaje de conductores del sexo masculino y femenino.
+            • Porcentaje de conductores masculinos con edades entre 12 y 30 años.
+            • Porcentaje de conductores cuyos carros están registradosfuera de Bogotá.
+             */
+
+            //int totalConductores = 0;
+            //int menores30 = 0;
+            //int masculinos = 0;
+            //int femeninos = 0;
+            //int masculinos12a30 = 0;
+            //int fueraBogota = 0;
+
+            //Console.Write("Ingrese la cantidad de conductores registrados: ");
+            //int n = int.Parse(Console.ReadLine());
+
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    Console.WriteLine($"\n=== Conductor #{i} ===");
+
+            //    int anioNacimiento;
+            //    do
+            //    {
+            //        Console.Write("Ingrese el año de nacimiento: ");
+            //        anioNacimiento = int.Parse(Console.ReadLine());
+            //        if (anioNacimiento <= 1900 || anioNacimiento > DateTime.Now.Year)
+            //            Console.WriteLine(" Año inválido. Intente nuevamente.");
+            //    } while (anioNacimiento <= 1900 || anioNacimiento > DateTime.Now.Year);
+
+            //    int edad = DateTime.Now.Year - anioNacimiento;
+
+            //    int sexo;
+            //    do
+            //    {
+            //        Console.Write("Ingrese el sexo (1: Femenino, 2: Masculino): ");
+            //        sexo = int.Parse(Console.ReadLine());
+            //        if (sexo != 1 && sexo != 2)
+            //            Console.WriteLine(" Opción inválida. Intente nuevamente.");
+            //    } while (sexo != 1 && sexo != 2);
+
+            //    int registro;
+            //    do
+            //    {
+            //        Console.Write("Registro del carro (1: Bogotá, 2: Otras ciudades): ");
+            //        registro = int.Parse(Console.ReadLine());
+            //        if (registro != 1 && registro != 2)
+            //            Console.WriteLine(" Opción inválida. Intente nuevamente.");
+            //    } while (registro != 1 && registro != 2);
+
+            //    totalConductores++;
+
+            //    if (edad < 30)
+            //        menores30++;
+
+            //    if (sexo == 1)
+            //        femeninos++;
+            //    else
+            //        masculinos++;
+
+            //    if (sexo == 2 && edad >= 12 && edad <= 30)
+            //        masculinos12a30++;
+
+            //    if (registro == 2)
+            //        fueraBogota++;
+            //}
+
+            //Console.WriteLine("\n=== Resultados Estadísticos ===");
+
+            //Console.WriteLine($"Porcentaje de conductores menores de 30 años: {(menores30 * 100.0 / totalConductores):F2}%");
+            //Console.WriteLine($"Porcentaje de conductores femeninos: {(femeninos * 100.0 / totalConductores):F2}%");
+            //Console.WriteLine($"Porcentaje de conductores masculinos: {(masculinos * 100.0 / totalConductores):F2}%");
+            //Console.WriteLine($"Porcentaje de conductores masculinos entre 12 y 30 años: {(masculinos12a30 * 100.0 / totalConductores):F2}%");
+            //Console.WriteLine($"Porcentaje de conductores con carros registrados fuera de Bogotá: {(fueraBogota * 100.0 / totalConductores):F2}%");
+
+            //Console.WriteLine("\n Proceso finalizado. Presione cualquier tecla para salir...");
+            //Console.ReadKey();
+
+            /*
+             Ejercicio 8
+                La empresa Tik Tok desea otorgar una bonificación a una cantidad N de sus
+            empleados, y para ello desea registrar la fecha de nacimientode cada uno de ellos en
+            su sistema de información. La bonificación se la dará sólo a los empleados mayores de
+            18 años y menores de 50 años y será un bonode $150.000 en el mes de su cumpleaños.
+            Con estos empleados se debe:
+            ● Sacar el promedio de las edades.
+            ● Publicar una lista desglosada por meses con el número total de empleadosque
+            cumplen años en cada mes, y el dinero total pagado en bonos.
+            Finalmente, se debe saber el total de dinero que debe tener la empresa Tik Tok
+            por concepto de bonificación.
+            Ejemplo de la lista desglosada por meses:
+            Mes Empleados TikTok Dinero en Bonos
+            Enero 5 empleados Dinero en Bonos $250.000
+            Febrero 10 empleados Dinero en Bonos $500.000
+            ... ... ...
+            */
+            const decimal BONO = 150000m;
+            int anioActual = DateTime.Now.Year;
+
+            Console.Write("Ingrese la cantidad de empleados: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] empleadosPorMes = new int[12]; 
+            int totalEmpleadosConBono = 0;
+            int sumaEdades = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine($"\n=== Empleado #{i} ===");
+
+                int dia, mes, anio;
+
+                do
+                {
+                    Console.Write("Ingrese el día de nacimiento (1-31): ");
+                    dia = int.Parse(Console.ReadLine());
+                    if (dia < 1 || dia > 31)
+                        Console.WriteLine(" Día inválido, intente nuevamente.");
+                } while (dia < 1 || dia > 31);
+
+                do
+                {
+                    Console.Write("Ingrese el mes de nacimiento (1-12): ");
+                    mes = int.Parse(Console.ReadLine());
+                    if (mes < 1 || mes > 12)
+                        Console.WriteLine(" Mes inválido, intente nuevamente.");
+                } while (mes < 1 || mes > 12);
+
+                do
+                {
+                    Console.Write("Ingrese el año de nacimiento: ");
+                    anio = int.Parse(Console.ReadLine());
+                    if (anio < 1900 || anio > anioActual)
+                        Console.WriteLine(" Año inválido, intente nuevamente.");
+                } while (anio < 1900 || anio > anioActual);
+
+                int edad = anioActual - anio;
+                sumaEdades += edad;
+
+                if (edad > 18 && edad < 50)
+                {
+                    empleadosPorMes[mes - 1]++;
+                    totalEmpleadosConBono++;
+                }
+            }
+
+            decimal totalBonos = totalEmpleadosConBono * BONO;
+            double promedioEdad = (double)sumaEdades / n;
+
+            Console.WriteLine("\n=== RESULTADOS ===");
+            Console.WriteLine($"Promedio de edad de los empleados: {promedioEdad:F2} años");
+            Console.WriteLine("\nMes\t\tEmpleados TikTok\tDinero en Bonos");
+
+            string[] meses = {
+            "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+            "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+            };
+
+            for (int i = 0; i < 12; i++)
+            {
+                int empleadosMes = empleadosPorMes[i];
+                decimal dineroMes = empleadosMes * BONO;
+
+                if (empleadosMes > 0)
+                    Console.WriteLine($"{meses[i],-12} {empleadosMes,5} empleados\t\t${dineroMes:N0}");
+                else
+                    Console.WriteLine($"{meses[i],-12} {empleadosMes,5} empleados\t\t$0");
+            }
+
+            Console.WriteLine($"\n Total de dinero a pagar por bonificaciones: ${totalBonos:N0}");
+            Console.WriteLine("\n Proceso finalizado. Presione cualquier tecla para salir...");
+            Console.ReadKey();
 
 
 
