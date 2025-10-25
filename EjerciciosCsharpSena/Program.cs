@@ -534,82 +534,134 @@ namespace EjerciciosCsharpSena
             Febrero 10 empleados Dinero en Bonos $500.000
             ... ... ...
             */
-            const decimal BONO = 150000m;
-            int anioActual = DateTime.Now.Year;
+            // const decimal BONO = 150000m;
+            // int anioActual = DateTime.Now.Year;
 
-            Console.Write("Ingrese la cantidad de empleados: ");
-            int n = int.Parse(Console.ReadLine());
+            // Console.Write("Ingrese la cantidad de empleados: ");
+            // int n = int.Parse(Console.ReadLine());
 
-            int[] empleadosPorMes = new int[12]; 
-            int totalEmpleadosConBono = 0;
-            int sumaEdades = 0;
+            // int[] empleadosPorMes = new int[12]; 
+            // int totalEmpleadosConBono = 0;
+            // int sumaEdades = 0;
 
-            for (int i = 1; i <= n; i++)
+            // for (int i = 1; i <= n; i++)
+            // {
+            //     Console.WriteLine($"\n=== Empleado #{i} ===");
+
+            //     int dia, mes, anio;
+
+            //     do
+            //     {
+            //         Console.Write("Ingrese el día de nacimiento (1-31): ");
+            //         dia = int.Parse(Console.ReadLine());
+            //         if (dia < 1 || dia > 31)
+            //             Console.WriteLine(" Día inválido, intente nuevamente.");
+            //     } while (dia < 1 || dia > 31);
+
+            //     do
+            //     {
+            //         Console.Write("Ingrese el mes de nacimiento (1-12): ");
+            //         mes = int.Parse(Console.ReadLine());
+            //         if (mes < 1 || mes > 12)
+            //             Console.WriteLine(" Mes inválido, intente nuevamente.");
+            //     } while (mes < 1 || mes > 12);
+
+            //     do
+            //     {
+            //         Console.Write("Ingrese el año de nacimiento: ");
+            //         anio = int.Parse(Console.ReadLine());
+            //         if (anio < 1900 || anio > anioActual)
+            //             Console.WriteLine(" Año inválido, intente nuevamente.");
+            //     } while (anio < 1900 || anio > anioActual);
+
+            //     int edad = anioActual - anio;
+            //     sumaEdades += edad;
+
+            //     if (edad > 18 && edad < 50)
+            //     {
+            //         empleadosPorMes[mes - 1]++;
+            //         totalEmpleadosConBono++;
+            //     }
+            // }
+
+            // decimal totalBonos = totalEmpleadosConBono * BONO;
+            // double promedioEdad = (double)sumaEdades / n;
+
+            // Console.WriteLine("\n=== RESULTADOS ===");
+            // Console.WriteLine($"Promedio de edad de los empleados: {promedioEdad:F2} años");
+            // Console.WriteLine("\nMes\t\tEmpleados TikTok\tDinero en Bonos");
+
+            // string[] meses = {
+            // "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+            // "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+            // };
+
+            // for (int i = 0; i < 12; i++)
+            // {
+            //     int empleadosMes = empleadosPorMes[i];
+            //     decimal dineroMes = empleadosMes * BONO;
+
+            //     if (empleadosMes > 0)
+            //         Console.WriteLine($"{meses[i],-12} {empleadosMes,5} empleados\t\t${dineroMes:N0}");
+            //     else
+            //         Console.WriteLine($"{meses[i],-12} {empleadosMes,5} empleados\t\t$0");
+            // }
+
+            // Console.WriteLine($"\n Total de dinero a pagar por bonificaciones: ${totalBonos:N0}");
+            // Console.WriteLine("\n Proceso finalizado. Presione cualquier tecla para salir...");
+            // Console.ReadKey();
+
+            const int totalCamiones = 20;
+            int camionesCargados = 0;
+
+            Console.WriteLine("--- Protocolo de carga de alcohol ---\n");
+
+            while (camionesCargados < totalCamiones)
             {
-                Console.WriteLine($"\n=== Empleado #{i} ===");
+                Console.WriteLine($"Camión #{camionesCargados + 1}");
+                Console.Write("Ingrese la capacidad máxima del camión (18000 a 28000 litros): ");
+                int capacidadCamion = int.Parse(Console.ReadLine());
 
-                int dia, mes, anio;
-
-                do
+                if (capacidadCamion < 18000 || capacidadCamion > 28000)
                 {
-                    Console.Write("Ingrese el día de nacimiento (1-31): ");
-                    dia = int.Parse(Console.ReadLine());
-                    if (dia < 1 || dia > 31)
-                        Console.WriteLine(" Día inválido, intente nuevamente.");
-                } while (dia < 1 || dia > 31);
-
-                do
-                {
-                    Console.Write("Ingrese el mes de nacimiento (1-12): ");
-                    mes = int.Parse(Console.ReadLine());
-                    if (mes < 1 || mes > 12)
-                        Console.WriteLine(" Mes inválido, intente nuevamente.");
-                } while (mes < 1 || mes > 12);
-
-                do
-                {
-                    Console.Write("Ingrese el año de nacimiento: ");
-                    anio = int.Parse(Console.ReadLine());
-                    if (anio < 1900 || anio > anioActual)
-                        Console.WriteLine(" Año inválido, intente nuevamente.");
-                } while (anio < 1900 || anio > anioActual);
-
-                int edad = anioActual - anio;
-                sumaEdades += edad;
-
-                if (edad > 18 && edad < 50)
-                {
-                    empleadosPorMes[mes - 1]++;
-                    totalEmpleadosConBono++;
+                    Console.WriteLine("Capacidad fuera del rango permitido. Intente nuevamente.\n");
+                    continue;
                 }
+
+                int cargaActual = 0;
+
+                while (true)
+                {
+                    Console.Write("Ingrese el volumen de la saca (3000 a 9000 litros): ");
+                    int saca = int.Parse(Console.ReadLine());
+
+                    if (saca < 3000 || saca > 9000)
+                    {
+                        Console.WriteLine("Saca fuera del rango permitido. Intente nuevamente.\n");
+                        continue;
+                    }
+
+                    if (cargaActual + saca > capacidadCamion)
+                    {
+                        Console.WriteLine($"No se puede cargar la saca. Se excedería la capacidad del camión ({cargaActual}/{capacidadCamion} litros).");
+                        Console.WriteLine("Camión despachado.\n");
+                        break;
+                    }
+
+                    cargaActual += saca;
+                    Console.WriteLine($"Saca cargada. Carga actual: {cargaActual}/{capacidadCamion} litros.");
+
+                    if (cargaActual == capacidadCamion)
+                    {
+                        Console.WriteLine("Camión cargado al máximo. Despachando...\n");
+                        break;
+                    }
+                }
+
+                camionesCargados++;
             }
 
-            decimal totalBonos = totalEmpleadosConBono * BONO;
-            double promedioEdad = (double)sumaEdades / n;
-
-            Console.WriteLine("\n=== RESULTADOS ===");
-            Console.WriteLine($"Promedio de edad de los empleados: {promedioEdad:F2} años");
-            Console.WriteLine("\nMes\t\tEmpleados TikTok\tDinero en Bonos");
-
-            string[] meses = {
-            "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-            "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
-            };
-
-            for (int i = 0; i < 12; i++)
-            {
-                int empleadosMes = empleadosPorMes[i];
-                decimal dineroMes = empleadosMes * BONO;
-
-                if (empleadosMes > 0)
-                    Console.WriteLine($"{meses[i],-12} {empleadosMes,5} empleados\t\t${dineroMes:N0}");
-                else
-                    Console.WriteLine($"{meses[i],-12} {empleadosMes,5} empleados\t\t$0");
-            }
-
-            Console.WriteLine($"\n Total de dinero a pagar por bonificaciones: ${totalBonos:N0}");
-            Console.WriteLine("\n Proceso finalizado. Presione cualquier tecla para salir...");
-            Console.ReadKey();
+            Console.WriteLine("Se han despachado los 20 camiones del día.");
 
 
 
